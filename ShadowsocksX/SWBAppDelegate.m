@@ -11,6 +11,7 @@
 #import "SWBQRCodeWindowController.h"
 #import "SWBAppDelegate.h"
 #import "GCDWebServer.h"
+#import "GCDWebServerDataResponse.h"
 #import "ShadowsocksRunner.h"
 #import "ProfileManager.h"
 #import "AFNetworking.h"
@@ -63,7 +64,8 @@ static SWBAppDelegate *appDelegate;
     }
     ];
 
-    [webServer startWithPort:8090 bonjourName:@"webserver"];
+    NSDictionary *options = @{ @"BindToLocalhost": @true, @"Port": @8090, @"bonjourName":@"webserver"};
+    [webServer startWithOptions:options error:NULL];
 
     manager = [AFHTTPRequestOperationManager manager];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];

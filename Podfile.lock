@@ -17,6 +17,10 @@ PODS:
   - AFNetworking/Reachability (2.5.4)
   - AFNetworking/Security (2.5.4)
   - AFNetworking/Serialization (2.5.4)
+  - GCDWebServer (3.2.5):
+    - GCDWebServer/Core (= 3.2.5)
+  - GCDWebServer/Core (3.2.5)
+  - GZIP (1.1.1)
   - libsodium (1.0.3)
   - OpenSSL-Static (1.0.2.c)
   - ZXingObjC (3.1.0):
@@ -25,14 +29,18 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
+  - GCDWebServer
+  - GZIP
   - libsodium (~> 1.0.3)
-  - OpenSSL-Static (= 1.0.2.c)
+  - OpenSSL-Static (~> 1.0.2.c)
   - ZXingObjC (~> 3.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  GCDWebServer: d0e1b23785e3dfd6c87601323d0f7cae059aab18
+  GZIP: f8beb59597f651e6970a45b816508a9c6d700b77
   libsodium: be547e31dc75725629acc5717dc0a40fc05ef243
   OpenSSL-Static: 31bba1208e010d835134533b8195f93ab210d249
   ZXingObjC: bf15b3814f7a105b6d99f47da2333c93a063650a
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.38.2

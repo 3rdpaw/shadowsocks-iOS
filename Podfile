@@ -4,11 +4,13 @@
 target 'shadowsocks' do
 pod 'ZXingObjC', '~> 3.0'
 pod 'libsodium', '~> 1.0.3'
+pod 'GCDWebServer'
+pod 'GZIP'
 
 end
 
 target 'libshadowsocks' do
-pod 'OpenSSL-Static', '1.0.2.c'
+pod 'OpenSSL-Static', '~> 1.0.2.c'
 
 end
 
@@ -17,6 +19,10 @@ platform :osx, '10.10'
 
 pod 'libsodium', '~> 1.0.3'
 pod 'AFNetworking', '~> 2.5'
+pod 'OpenSSL-Static', '~> 1.0.2.c'
+pod 'GCDWebServer'
+pod 'GZIP'
+#pod 'NSData+Base64'
 
 end
 

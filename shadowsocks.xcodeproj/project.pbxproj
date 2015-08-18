@@ -60,7 +60,6 @@
 		625E5BC119EA3A43007A5124 /* jquery.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 625E5BBF19EA3A43007A5124 /* jquery.min.js */; };
 		625E5BC219EA3A43007A5124 /* qrcode.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 625E5BC019EA3A43007A5124 /* qrcode.min.js */; };
 		625E5BC519EA3A6B007A5124 /* qrcode.htm in Resources */ = {isa = PBXBuildFile; fileRef = 625E5BC319EA3A6B007A5124 /* qrcode.htm */; };
-		626C4ADB18B1E352003DBE33 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 626C4ADA18B1E352003DBE33 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6274846E18B1FD5C00A9CDF0 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6274846D18B1FD5C00A9CDF0 /* CoreVideo.framework */; };
 		6274847018B1FD6500A9CDF0 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6274846F18B1FD6500A9CDF0 /* CoreMedia.framework */; };
 		6274847218B1FD6F00A9CDF0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6274847118B1FD6F00A9CDF0 /* QuartzCore.framework */; };
@@ -245,8 +244,6 @@
 		625E5BBF19EA3A43007A5124 /* jquery.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.min.js; sourceTree = "<group>"; };
 		625E5BC019EA3A43007A5124 /* qrcode.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = qrcode.min.js; sourceTree = "<group>"; };
 		625E5BC319EA3A6B007A5124 /* qrcode.htm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = qrcode.htm; sourceTree = "<group>"; };
-		626C4AD918B1E352003DBE33 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "NSData-Base64/NSData+Base64.h"; sourceTree = SOURCE_ROOT; };
-		626C4ADA18B1E352003DBE33 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "NSData-Base64/NSData+Base64.m"; sourceTree = SOURCE_ROOT; };
 		6274846D18B1FD5C00A9CDF0 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		6274846F18B1FD6500A9CDF0 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		6274847118B1FD6F00A9CDF0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -666,15 +663,6 @@
 				621FCC0117603FFA00411E5F /* GCDWebServerResponse.m */,
 			);
 			name = GCDWebServer;
-			sourceTree = "<group>";
-		};
-		626C4AD818B1E338003DBE33 /* base64 */ = {
-			isa = PBXGroup;
-			children = (
-				626C4AD918B1E352003DBE33 /* NSData+Base64.h */,
-				626C4ADA18B1E352003DBE33 /* NSData+Base64.m */,
-			);
-			name = base64;
 			sourceTree = "<group>";
 		};
 		627A6DFA18B47E9300493BBC /* Other Frameworks */ = {
@@ -1193,10 +1181,6 @@
 				628693E116DA2578008B1A26 /* AppProxyCap.m in Sources */,
 				628693E716DA2584008B1A26 /* interpose.c in Sources */,
 				628693F816DA2817008B1A26 /* ProxySettingsTableViewController.m in Sources */,
-				621FCC0217603FFA00411E5F /* GCDWebServer.m in Sources */,
-				621FCC0317603FFA00411E5F /* GCDWebServerConnection.m in Sources */,
-				621FCC0417603FFA00411E5F /* GCDWebServerRequest.m in Sources */,
-				621FCC0517603FFA00411E5F /* GCDWebServerResponse.m in Sources */,
 				EB1891FD5CE9480608918422 /* SimpleTableViewSource.m in Sources */,
 				62D85A8D176DA6FC00FE5575 /* atom.c in Sources */,
 				62D85A8E176DA6FC00FE5575 /* auth.c in Sources */,
@@ -1212,9 +1196,6 @@
 				62D85A9C176DA6FC00FE5575 /* http.c in Sources */,
 				62D85A9D176DA6FC00FE5575 /* http_parse.c in Sources */,
 				62D85A9F176DA6FC00FE5575 /* io.c in Sources */,
-				62E27E5918C1D0CF0086033D /* GZIP.m in Sources */,
-				62D85AA0176DA6FC00FE5575 /* local.c in Sources */,
-				626C4ADB18B1E352003DBE33 /* NSData+Base64.m in Sources */,
 				62D85AA2176DA6FC00FE5575 /* log.c in Sources */,
 				62D85AA3176DA6FC00FE5575 /* main.c in Sources */,
 				62D85AA4176DA6FC00FE5575 /* Makefile in Sources */,
@@ -1247,12 +1228,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62E27E5A18C1D0CF0086033D /* GZIP.m in Sources */,
-				629AC93418B49676001D2771 /* GCDWebServer.m in Sources */,
 				628C91BD1A07AA5800BA1566 /* Profile.m in Sources */,
-				629AC93518B49676001D2771 /* GCDWebServerConnection.m in Sources */,
-				629AC93618B49676001D2771 /* GCDWebServerRequest.m in Sources */,
-				629AC93718B49676001D2771 /* GCDWebServerResponse.m in Sources */,
 				627A6E4118B47FAE00493BBC /* encrypt.c in Sources */,
 				9B5B40E21B51558F00AC37CA /* LaunchAtLoginController.m in Sources */,
 				627A6E4218B47FAE00493BBC /* table.m in Sources */,
@@ -1472,10 +1448,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShadowWeb/shadowsocks-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"OpenSSL-for-iPhone/include/",
-					"./zxing-objc/**",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = "ShadowWeb/shadowsocks-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -1505,10 +1478,7 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ShadowWeb/shadowsocks-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"OpenSSL-for-iPhone/include/",
-					"./zxing-objc/**",
-				);
+				HEADER_SEARCH_PATHS = "$(inherited)/**";
 				INFOPLIST_FILE = "ShadowWeb/shadowsocks-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
@@ -1538,7 +1508,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/OpenSSL-for-iPhone/lib\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = shadowsocks;
 				SKIP_INSTALL = YES;
 			};
@@ -1561,7 +1534,10 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/OpenSSL-for-iPhone/lib\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
 				PRODUCT_NAME = shadowsocks;
 				SKIP_INSTALL = YES;
 			};
@@ -1575,7 +1551,6 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1608,7 +1583,6 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
